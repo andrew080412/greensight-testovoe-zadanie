@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  background: #f6f6f6;
+  margin: 0; }
+
+.content {
+  max-width: 1028px;
+  margin: 0 auto;
+  padding: 0 16px;
+  width: 100%;
+  min-width: 300px; }
+
+h2 {
+  font-size: 32px;
+  margin-top: 50px;
+  line-height: 1; }
+
+.row {
+  display: flex;
+  flex-direction: row; }
+
+.rowJustify {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.w-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%; }
+
+.w-50 {
+  width: calc(50% - 8px); }
+
+.d-flex {
+  display: flex; }
+
+.d-none {
+  display: none; }
+
+.active {
+  display: block !important; }
+
+.tab {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  cursor: pointer; }
+
+.tab p {
+  text-align: center; }
+
+.tab:hover {
+  color: #212bff; }
+
+.tab1 {
+  width: 161px;
+  background: url("../img/tab1.png") no-repeat; }
+
+.tab1.activeTab {
+  background: url("../img/active_tab1.png") no-repeat;
+  color: #212bff;
+  z-index: 2; }
+
+.tab2 {
+  width: 182px;
+  background: url("../img/tab2.png") no-repeat;
+  left: -30px; }
+
+.tab2.activeTab {
+  background: url("../img/active_tab2.png") no-repeat;
+  color: #212bff;
+  z-index: 2; }
+
+.tab1 p {
+  width: 140px; }
+
+.tab2 p {
+  width: 160px; }
+
+.tabContent {
+  background: #fff;
+  padding: 36px 32px;
+  display: none; }
+
+.tabContent1 > div, .tabContent1 .w-100-mobile {
+  margin-bottom: 19px; }
+
+.tabContent2 .w-50 {
+  padding-bottom: 27px; }
+
+.tabContent > div:last-child, .tabContent1 > div:first-child {
+  margin-bottom: 0; }
+
+.tabContent label {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px; }
+
+.tabContent input {
+  font-family: 'Montserrat';
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #b8bed8;
+  padding: 18px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 1; }
+
+.tabContent textarea {
+  font-family: 'Montserrat';
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #b8bed8;
+  padding: 18px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 111px; }
+
+.tabContent input:focus, .tabContent textarea:focus {
+  border-color: #8288a2;
+  outline: none; }
+
+.tabContent input:disabled, .tabContent textarea:disabled {
+  border-color: transparent;
+  background-color: #edeeef; }
+
+.errorState {
+  border-color: #ff1e38 !important; }
+
+.errorMessage {
+  margin-top: 7px;
+  height: 12px;
+  font-size: 12px;
+  color: #ff1e38;
+  width: 100%; }
+
+.tabContent input::placeholder {
+  color: #b8bed8; }
+
+.tabContent input::-webkit-input-placeholder {
+  color: #b8bed8; }
+
+.tabContent input::-moz-placeholder {
+  color: #b8bed8; }
+
+.tabContent input:-moz-placeholder {
+  color: #b8bed8; }
+
+.tabContent input:-ms-input-placeholder {
+  color: #b8bed8; }
+
+.submitWrap {
+  display: flex;
+  justify-content: flex-end; }
+
+.submitBtn {
+  display: inline-block;
+  background: #212bff;
+  border-radius: 28px;
+  height: 56px;
+  line-height: 56px;
+  color: #fff;
+  padding: 0 59px;
+  cursor: pointer; }
+
+.submitBtn.disabled {
+  background-color: #edeeef !important;
+  color: #b8bed8 !important; }
+
+.submitBtn:hover {
+  background-color: #2029ea; }
+
+.submitBtn:active {
+  background-color: #1e26d8; }
+
+.radioLabel {
+  font-weight: 700;
+  order: 2;
+  margin-left: 14px;
+  line-height: 20px;
+  width: calc(100% - 34px); }
+
+.radioButton {
+  width: 20px;
+  height: 20px;
+  background: url("../img/radioStates.png") top center no-repeat;
+  order: 1; }
+
+.radioLabel, .radioButton {
+  cursor: pointer; }
+
+.radioButton:hover, .radioLabel:hover + .radioButton {
+  background-position-y: -20px; }
+
+.activeRadio {
+  background-position-y: -40px !important; }
+
+#map {
+  height: 550px;
+  width: 100%;
+  margin-bottom: 36px; }
+
+.tab-mobile {
+  background: #fff;
+  color: #b8bed8;
+  padding: 20px 16px;
+  border-top: 1px solid #b8bed8;
+  position: relative;
+  cursor: pointer; }
+
+.tab-mobile:hover {
+  color: #212bff; }
+
+.tab-mobile:hover::after {
+  background-position-y: -6px; }
+
+.tab-mobile::after {
+  display: block;
+  content: '';
+  width: 10px;
+  height: 6px;
+  background: url("../img/arrow.png") top center no-repeat;
+  position: absolute;
+  right: 16px;
+  top: calc(50% - 3px); }
+
+.tab-mobile-2 {
+  border-bottom: 1px solid #b8bed8; }
+
+.tab-mobile-active {
+  border-bottom: 1px solid #b8bed8;
+  color: #212bff; }
+
+.tab-mobile-active::after {
+  background-position-y: bottom !important; }
+
+@media (max-width: 767px) {
+  .rowColumn-mobile {
+    display: flex;
+    flex-direction: column; }
+  .w-100-mobile {
+    width: 100%; }
+  .d-block-mobile {
+    display: block; }
+  .d-none-mobile {
+    display: none; }
+  #map {
+    height: 300px; }
+  .tabContent {
+    padding: 24px 16px; } }

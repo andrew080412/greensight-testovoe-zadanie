@@ -1,0 +1,227 @@
+$blueColor: #212bff
+$lightBlueColor: #b8bed8
+$hoverBlueColor: #2029ea
+$pressedBlueColor: #1e26d8
+$darkVioletColor: #8288a2
+$disabledColor: #edeeef
+$errorColor: #ff1e38
+
+$borderlightBlue: 1px solid $lightBlueColor
+
+@mixin fontFamily
+  font-family: 'Montserrat'
+@mixin font
+  @include fontFamily
+  font-size: 14px
+@mixin input
+  @include fontFamily
+  font-size: 16px
+  width: 100%
+  border: $borderlightBlue
+  padding: 18px 20px
+  border-radius: 4px
+  cursor: pointer
+@mixin row
+  display: flex
+  flex-direction: row
+@mixin column
+  display: flex
+  flex-direction: column
+
+*
+  box-sizing: border-box
+body
+  @include font
+  background: #f6f6f6
+  margin: 0
+.content
+  max-width: 1028px
+  margin: 0 auto
+  padding: 0 16px
+  width: 100%
+  min-width: 300px
+h2
+  font-size: 32px
+  margin-top: 50px
+  line-height: 1
+.row
+  @include row
+.rowJustify
+  @include row
+  justify-content: space-between
+.w-auto
+  -ms-flex: 0 0 auto
+  flex: 0 0 auto
+  width: auto
+  max-width: 100%
+.w-50
+  width: calc(50% - 8px)
+.d-flex
+  display: flex
+.d-none
+  display: none
+.active
+  display: block!important
+
+.tab
+  height: 64px
+  display: flex
+  align-items: center
+  position: relative
+  z-index: 1
+  cursor: pointer
+.tab p
+  text-align: center
+.tab:hover
+  color: $blueColor
+.tab1
+  width: 161px
+  background: url('../img/tab1.png') no-repeat
+.tab1.activeTab
+  background: url('../img/active_tab1.png') no-repeat
+  color: $blueColor
+  z-index: 2
+.tab2
+  width: 182px
+  background: url('../img/tab2.png') no-repeat
+  left: -30px
+.tab2.activeTab
+  background: url('../img/active_tab2.png') no-repeat
+  color: $blueColor
+  z-index: 2
+.tab1 p
+  width: 140px
+.tab2 p
+  width: 160px
+.tabContent
+  background: #fff
+  padding: 36px 32px
+  display: none
+.tabContent1 > div, .tabContent1 .w-100-mobile
+  margin-bottom: 19px
+.tabContent2 .w-50
+  padding-bottom: 27px
+.tabContent > div:last-child, .tabContent1 > div:first-child
+  margin-bottom: 0
+.tabContent label
+  width: 100%
+  display: block
+  margin-bottom: 10px
+.tabContent input
+  @include input
+  line-height: 1
+.tabContent textarea
+  @include input
+  max-width: 100%
+  min-width: 100%
+  min-height: 111px
+.tabContent input:focus, .tabContent textarea:focus
+  border-color: $darkVioletColor
+  outline: none
+.tabContent input:disabled, .tabContent textarea:disabled
+  border-color: transparent
+  background-color: $disabledColor
+.errorState
+  border-color: $errorColor!important
+.errorMessage
+  margin-top: 7px
+  height: 12px
+  font-size: 12px
+  color: $errorColor
+  width: 100%
+
+.tabContent input::placeholder
+  color: $lightBlueColor
+.tabContent input::-webkit-input-placeholder
+  color: $lightBlueColor
+.tabContent input::-moz-placeholder
+  color: $lightBlueColor
+.tabContent input:-moz-placeholder
+  color: $lightBlueColor
+.tabContent input:-ms-input-placeholder
+  color: $lightBlueColor
+
+.submitWrap
+  display: flex
+  justify-content: flex-end
+.submitBtn
+  display: inline-block
+  background: $blueColor
+  border-radius: 28px
+  height: 56px
+  line-height: 56px
+  color: #fff
+  padding: 0 59px
+  cursor: pointer
+.submitBtn.disabled
+  background-color: $disabledColor!important
+  color: $lightBlueColor!important
+.submitBtn:hover
+  background-color: $hoverBlueColor
+.submitBtn:active
+  background-color: $pressedBlueColor
+
+.radioLabel
+  font-weight: 700
+  order: 2
+  margin-left: 14px
+  line-height: 20px
+  width: calc(100% - 34px)
+.radioButton
+  width: 20px
+  height: 20px
+  background: url('../img/radioStates.png') top center no-repeat
+  order: 1
+.radioLabel, .radioButton
+  cursor: pointer
+.radioButton:hover, .radioLabel:hover + .radioButton
+  background-position-y: -20px
+.activeRadio
+  background-position-y: -40px!important
+
+#map
+  height: 550px
+  width: 100%
+  margin-bottom: 36px
+
+.tab-mobile
+  background: #fff
+  color: $lightBlueColor
+  padding: 20px 16px
+  border-top: $borderlightBlue
+  position: relative
+  cursor: pointer
+.tab-mobile:hover
+  color: $blueColor
+.tab-mobile:hover::after
+  background-position-y: -6px
+.tab-mobile::after
+  display: block
+  content: ''
+  width: 10px
+  height: 6px
+  background: url('../img/arrow.png') top center no-repeat
+  position: absolute
+  right: 16px
+  top: calc(50% - 3px)
+.tab-mobile-2
+  border-bottom: $borderlightBlue
+.tab-mobile-active
+  border-bottom: $borderlightBlue
+  color: $blueColor
+.tab-mobile-active::after
+  background-position-y: bottom!important
+
+@media (max-width: 767px)
+  .rowColumn-mobile
+    @include column
+  .w-100-mobile
+    width: 100%
+  .d-block-mobile
+    display: block
+  .d-none-mobile
+    display: none
+  #map
+    height: 300px
+  .tabContent
+    padding: 24px 16px

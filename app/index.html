@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="content">
+        <h2>Выберите способ доставки</h2>
+
+        <div class="row d-none-mobile">
+            <div class="tab tab1">
+                <p>Доставка</p>
+            </div>
+            <div class="tab tab2">
+                <p>Самовывоз</p>
+            </div>
+        </div>
+        <div class="tab-mobile tab-mobile-1 d-none d-block-mobile">
+            Доставка
+        </div>
+        <div class="tabContent tabContent1">
+            <div class="rowJustify rowColumn-mobile">
+                <div class="w-50 w-100-mobile">
+                    <label for="name">ФИО</label>
+                    <input type="text" id="name" placeholder="Только кириллица">
+                    <div class="errorMessage"></div>
+                </div>
+                <div class="w-50 w-100-mobile">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" placeholder="+7 (___) ___-__-__">
+                    <div class="errorMessage"></div>
+                </div>
+            </div>
+            <div>
+                <label for="address">Адресс доставки</label>
+                <input type="text" id="address" placeholder="Город, улица, дом">
+                <div class="errorMessage"></div>
+            </div>
+            <div>
+                <label for="comment">Комментарий</label>
+                <textarea id="comment"></textarea>
+                <div class="errorMessage"></div>
+            </div>
+            <div class="submitWrap">
+                <div class="submitBtn" id="submitTab1">Отправить</div>
+            </div>
+        </div>
+        <div class="tab-mobile tab-mobile-2 d-none d-block-mobile">
+            Самовывоз
+        </div>
+        <div class="tabContent tabContent2">
+            <div class="rowJustify rowColumn-mobile">
+                <div class="w-50 w-100-mobile d-flex">
+                    <div class="radioLabel">Пункт Выдачи заказов Песчаная улица, дом 13</div>
+                    <div class="radioButton" data-group="pickupPoint"></div>
+                </div>
+                <div class="w-50 w-100-mobile d-flex">
+                    <div class="radioLabel">Пункт Выдачи заказов Подсосенский переулок, 11</div>
+                    <div class="radioButton" data-group="pickupPoint"></div>
+                </div>
+            </div>
+            <div id="map"></div>
+            <div class="submitWrap">
+                <div class="submitBtn" id="submitTab2">Отправить</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ce993cd8-0f50-4141-aa19-520af534afa5&amp;lang=ru_RU" type="text/javascript"></script>
+    <script src="js/map.js"></script>
+</body>
+</html>
